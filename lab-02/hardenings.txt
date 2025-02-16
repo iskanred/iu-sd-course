@@ -1,0 +1,63 @@
+It's hard to avoid all the risks that are presented by the code because the code contains many bugs, so
+the risks may be avoided by fixing this bugs primarily.
+
+However, I tried to collect some advice that can help to mitigate the risks.
+
+1. User Account Security:
+    Create a user account with limited privileges specifically for running application:
+
+    ```
+    sudo adduser application
+    sudo chown application:application hash
+    su - application -c ./hash
+    ```
+
+2. Make sure your C files and any executables are not globally writable:
+    ```
+    chmod 755 hash
+    chmod 644 hash.c hash.h
+    ```
+
+3. Use Access Control Lists:
+    Utilize ACLs to fine-tune access permissions for users and groups on your files and directories.
+
+    ```
+    sudo setfacl -m u:applicatoin:rw hash
+    ```
+
+4. Enable Memory Protection Features:
+    ```
+    gcc -o hash hash.c -fstack-protector-strong -D_FORTIFY_SOURCE=2 -O2 -Wformat -Wformat-security
+    ```
+
+    * `-fstack-protector-strong` option enables stack protection mechanisms to help prevent stack buffer overflow attacks.
+    * `-D_FORTIFY_SOURCE=2` option enables additional compile-time and runtime checks for certain built-in functions to help mitigate the risks associated with buffer overflow vulnerabilities. Setting _FORTIFY_SOURCE to 2 activates more aggressive optimizations and checks.
+    * `-O2` is an optimization level flag that tells the compiler to optimize the code.
+    * `-Wformat -Wformat-security` are warning flags that enable warnings related to `printf`-style format specifiers in functions that are called with format strings.
+
+5. Utilize Address Space Layout Randomization:
+    ASLR is enabled by default in modern Linux systems, providing an additional layer of protection against buffer overflow attacks.
+
+    ```
+    cat /proc/sys/kernel/randomize_va_space
+    ```
+
+    Ensure it returns `2` (full randomization).
+
+6. Compile-time Hardening:
+    Compile with warnings enabled to catch issues early:
+
+    ```bash
+    gcc -Wall -Wextra -Wpedantic -o hash hash.c
+    ```
+
+7. Static Code Analysis:
+    Integrate a static analysis tool into a development workflow.
+
+    ```bash
+    cppcheck hash.c hash.h
+    ```
+
+8. Use Isolated Environments:
+    Consider using `Docker` to isolate the execution environment for your applications.
+    This reduces the risk of your application affecting or being affected by the host OS.
