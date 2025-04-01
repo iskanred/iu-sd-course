@@ -11,12 +11,14 @@
             "id": "f94df92c1681776f",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "lab-03/images/Pasted image 20250225022847.png"
+                "file": "README.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20250225022847"
+              "icon": "lucide-file",
+              "title": "README"
             }
           }
         ]
@@ -51,8 +53,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#include",
-                "matchingCase": false,
+                "query": "",
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -76,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 411.50390243530273
   },
   "right": {
     "id": "bbda3b98b39a89c8",
@@ -163,26 +165,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "cae83d9b0a390196",
+  "active": "f94df92c1681776f",
   "lastOpenFiles": [
-    "lab-03/images",
-    "lab-03/iu-sd-lab-02-Iskander_Nafikov.md",
-    "lab-03/iu-sd-lab-02-Iskander_Nafikov.pdf",
-    "lab-03/images/Pasted image 20250225022847.png",
-    "lab-03/images/Pasted image 20250225021225.png",
-    "lab-03/images/Pasted image 20250225021156.png",
-    "lab-03/images/Pasted image 20250225021007.png",
-    "lab-03/images/Pasted image 20250225021004.png",
-    "lab-03/images/Pasted image 20250225015908.png",
-    "lab-03/images/Pasted image 20250225015857.png",
-    "lab-03/images/Pasted image 20250225015538.png",
-    "lab-03/images/Pasted image 20250225015026.png",
-    "lab-03/images/Pasted image 20250225014859.png",
-    "lab-03/input/seed.txt",
-    "lab-03/input",
-    "lab-03/vulnerable.c",
+    "lab-05/iu-sd-lab-05-Iskander_Nafikov.pdf",
     "README.md",
+    "lab-05/iu-sd-lab-05-Iskander_Nafikov.md",
+    "lab-06/iu-sd-lab-06-Iskander_Nafikov.md",
+    "lab-05/images/Pasted image 20250401042717.png",
+    "lab-05/images/Pasted image 20250401042606.png",
+    "lab-05/images/Pasted image 20250401042515.png",
+    "lab-05/images/Pasted image 20250401041534.png",
+    "lab-05/images/Pasted image 20250401040245.png",
+    "lab-05/images/Pasted image 20250401040207.png",
+    "lab-05/images/Pasted image 20250401035524.png",
+    "lab-05/images/Pasted image 20250401035417.png",
+    "lab-05/images/Pasted image 20250401035055.png",
+    "lab-05/images/Pasted image 20250401034832.png",
+    "lab-06/images",
+    "lab-05/images",
+    "lab-06",
+    "lab-04/iu-sd-lab-04-Iskander_Nafikov.md",
+    "lab-04/iu-sd-lab-04-Iskander_Nafikov.pdf",
+    "lab-01/iu-sd-lab-01-Iskander_Nafikov.md",
+    "lab-05",
+    "lab-04/logins",
+    "lab-04/images",
+    "lab-03/iu-sd-lab-03-Iskander_Nafikov.md",
     "lab-02/iu-sd-lab-02-Iskander_Nafikov.md",
-    "lab-03"
+    "lab-03/iu-sd-lab-03-Iskander_Nafikov.pdf",
+    "lab-04"
   ]
 }
